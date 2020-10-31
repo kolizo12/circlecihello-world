@@ -19,10 +19,10 @@ jobs:
   print_Myname:
     docker:
       - image: cimg/base:2020.01
-    steps:
-      - run:
-        command: |
-          echoo $MyNAME
+  #  steps:
+  #    - run:
+  #      command: |
+  #        echo $MyNAME
 workflows:
   # Name the workflow "welcome"
   welcome:
