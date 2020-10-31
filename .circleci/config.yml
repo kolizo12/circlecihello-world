@@ -18,11 +18,9 @@ jobs:
       - run: echo world
   print_Myname:
     docker:
-     - image: cimg/base:2020.01
-  #  steps:
-  #    - run:
-  #      command: |
-  #        echo $MyNAME
+      - image: circleci/node:13.8.0
+    steps:
+      - run: echo $MyName
 workflows:
   # Name the workflow "welcome"
   welcome:
@@ -33,4 +31,4 @@ workflows:
       - print_world:
           requires:
             - print_hello
-  #    - print_Myname
+      - print_Myname
