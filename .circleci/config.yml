@@ -46,3 +46,6 @@ workflows:
           requires:
             - print_hello
       - print_Myname
+      - save_hello_world_output:
+          requires:
+            - print_Myname
