@@ -21,10 +21,11 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
   #    - checkout
-      - run:
-          command: |
-            echo $names
-            echo $sex
+      - run: echo $names
+
+  #        command: |
+  #          echo $names
+  #          echo $sex
 workflows:
   # Name the workflow "welcome"
   welcome:
