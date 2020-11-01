@@ -15,6 +15,12 @@ jobs:
           root: ~/
           paths:
             - output.txt
+  Pass_hello_world_to_new_job:
+    docker:
+      - image: circleci/node:13.8.0
+      - attach_workspace:
+          at: ~/
+      - run: cat ~/~/output.txt
   print_hello:
     docker:
       - image: circleci/node:13.8.0
@@ -34,6 +40,7 @@ jobs:
           command: |
             echo $names
             echo $sex
+
 workflows:
   # Name the workflow "welcome"
   welcome:
@@ -48,3 +55,6 @@ workflows:
       - save_hello_world_output:
           requires:
             - print_Myname
+      - Pass_hello_world_to_new_job:
+          requires:
+            - save_hello_world_output
