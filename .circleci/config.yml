@@ -23,8 +23,8 @@ jobs:
       - checkout:
       - run:
           name: "echo an env var that is part of our project"
-          command: |
-            echo $MyName
+  #        command: |
+  #          echo $myName
 workflows:
   # Name the workflow "welcome"
   welcome:
