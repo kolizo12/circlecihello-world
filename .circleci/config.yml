@@ -18,9 +18,10 @@ jobs:
   Pass_hello_world_to_new_job:
     docker:
       - image: circleci/node:13.8.0
+    steps:
       - attach_workspace:
           at: ~/
-      - run: cat ~/~/output.txt
+      - run: cat ~/output.txt
   print_hello:
     docker:
       - image: circleci/node:13.8.0
