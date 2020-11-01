@@ -19,10 +19,10 @@ jobs:
   print_Myname:
     docker:
       - image: circleci/node:13.8.0
-    steps:
-      - checkout:
-      - run:
-          name: "echo an env var that is part of our project"
+  #  steps:
+  #    - checkout:
+  #    - run:
+  #        name: "echo an env var that is part of our project"
   #        command: |
   #          echo $myName
 workflows:
