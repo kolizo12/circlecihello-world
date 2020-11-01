@@ -20,25 +20,29 @@ jobs:
           paths:
             - output.txt
   Pass_hello_world_to_new_job:
-    docker:
-      - image: circleci/node:13.8.0
+    <<: *shareimage
+  #  docker:
+  #    - image: circleci/node:13.8.0
     steps:
       - attach_workspace:
           at: ~/
       - run: cat ~/output.txt
   print_hello:
-    docker:
-      - image: circleci/node:13.8.0
+    <<: *shareimage
+#    docker:
+#      - image: circleci/node:13.8.0
     steps:
       - run: echo hello
   print_world:
-    docker:
-      - image: circleci/node:13.8.0
+    <<: *shareimage
+  #  docker:
+#      - image: circleci/node:13.8.0
     steps:
       - run: echo world
   print_Myname:
-    docker:
-      - image: circleci/node:13.8.0
+    <<: *shareimage
+#    docker:
+#      - image: circleci/node:13.8.0
     steps:
   #    - checkout
       - run:
