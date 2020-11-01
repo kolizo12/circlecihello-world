@@ -24,6 +24,7 @@ jobs:
       - run:
           command: |
             echo $names
+            echo $sex
 workflows:
   # Name the workflow "welcome"
   welcome:
