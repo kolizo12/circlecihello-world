@@ -15,7 +15,7 @@ jobs:
       - persist_to_workspace:
           root: /tmp
           path:
-            output.txt
+            - output.txt
   print_hello:
     docker:
       - image: circleci/node:13.8.0
