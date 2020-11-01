@@ -23,7 +23,7 @@ jobs:
       - checkout
       - run:
           command: |
-            echo $myname
+            echo ${myname}
 workflows:
   # Name the workflow "welcome"
   welcome:
